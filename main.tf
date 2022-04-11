@@ -4,6 +4,7 @@ provider "aws" {
 
 variable "vpcname" {
   type = string
+  Default = "demo"
 }
 
 resource "aws_vpc" "myvpc" {
