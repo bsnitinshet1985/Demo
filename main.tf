@@ -2,16 +2,14 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-resource "aws_vpc" "myvpc" {
-  cidr_block = "10.0.0.0/16"
-  tags = {
-    Name = "test1"
-  }
+variable "vpcname" {
+  type = string
 }
 
-resource "aws_vpc" "myvpc2" {
-  cidr_block = "10.0.0.0/16"
+resource "aws_vpc" "myvpc" {
+  cidr_block = "10.50.0.0/16"
+
   tags = {
-    Name = "test2"
+    Name = var.vpcname
   }
 }
