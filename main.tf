@@ -24,7 +24,7 @@ output "vpc_arn" {
 output "vpc_id" {
   value       = aws_vpc.myvpc.id
   description = "The id of this VPC"
-  sensitive   = true
+  sensitive   = false
 }
 
 output "vpc_mrt" {
