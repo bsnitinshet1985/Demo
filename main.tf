@@ -14,3 +14,27 @@ resource "aws_vpc" "myvpc" {
     Name = var.vpcname
   }
 }
+
+output "vpc_arn" {
+  value       = aws_vpc.myvpc.arn
+  description = "The arn of this VPC"
+  sensitive   = true
+}
+
+output "vpc_id" {
+  value       = aws_vpc.myvpc.id
+  description = "The id of this VPC"
+  sensitive   = true
+}
+
+output "vpc_mrt" {
+  value       = aws_vpc.myvpc.main_route_table_id
+  description = "The main_route_table_id  of this VPC"
+  sensitive   = true
+}
+
+output "owner_id"{
+  value       = aws_vpc.myvpc.owner_id
+  description = "The owner_id  of this VPC"
+  sensitive   = true
+}
