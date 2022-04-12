@@ -36,5 +36,5 @@ output "vpc_mrt" {
 output "owner_id"{
   value       = aws_vpc.myvpc.owner_id
   description = "The owner_id  of this VPC"
-  sensitive   = true
+  sensitive   = false
 }
